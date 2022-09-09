@@ -1,5 +1,7 @@
 # Roomate-Matcher
 
+[![CodeQL](https://github.com/akhil-datla/Roommate-Matcher/actions/workflows/codeql.yml/badge.svg)](https://github.com/akhil-datla/Roommate-Matcher/actions/workflows/codeql.yml)
+
 1. Clone this GitHub repository or [download the zip file](https://github.com/akhil-datla/Roommate-Matcher/archive/refs/heads/main.zip).
 
 2. [Edit the group size](https://github.com/akhil-datla/Roommate-Matcher/blob/main/main.py#L7) (default: 4).

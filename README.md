@@ -1,4 +1,4 @@
-# Roomate-Matcher
+# Roommate-Matcher
 
 [![CodeQL](https://github.com/akhil-datla/Roommate-Matcher/actions/workflows/codeql.yml/badge.svg)](https://github.com/akhil-datla/Roommate-Matcher/actions/workflows/codeql.yml)
 

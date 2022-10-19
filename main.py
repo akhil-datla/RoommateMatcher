@@ -34,7 +34,7 @@ for idx in studentsDf.index:
     ]
 
     for pref in prefs:
-        # if the prefrence is in the dataset and student is not the same as the prefrence
+        # if the prefrence is not in the dataset and student is the same as the prefrence
         if (studentsDf[studentsDf["Email Address"] == pref].index.values.size <= 0):
             print("Student " + student + " has a preference that is not in the dataset or does not have a preference.")
             continue

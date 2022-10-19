@@ -1,3 +1,4 @@
+import math
 import numpy as np
 import pandas as pd
 from algorithm import Matching, Group
@@ -24,6 +25,9 @@ if studentsDf.shape[0] <= 0:
 # Initialize a matrix of student preferences with the default value of 0 (no preference)
 studentPrefMatrix = np.zeros((studentsDf.shape[0], studentsDf.shape[0]), dtype=float)
 
+# Dataframe of students who had errors in their preferences
+errorDf = pd.DataFrame(columns=["Student Name", "Student Email", "Error"])
+
 for idx in studentsDf.index:
     row = studentsDf.loc[idx]
     student = row["Email Address"]
@@ -34,13 +38,17 @@ for idx in studentsDf.index:
     ]
 
     for pref in prefs:
-        # if the prefrence is not in the dataset and student is the same as the prefrence
+        
+        # check if the prefrence is in the dataset
         if (studentsDf[studentsDf["Email Address"] == pref].index.values.size <= 0):
-            print("Student " + student + " has a preference that is not in the dataset or does not have a preference.")
+            errorDf.loc[len(errorDf.index)] = [row["Full Name"], student, "Preference not in dataset or does not have preference"]
             continue
+            
+        # check if student put themself as a preference
         elif (student == pref):
-            print("Student " + student + " has a preference that is themself.")
+            errorDf.loc[len(errorDf.index)] = [row["Full Name"], student, "Preference is themself"]
             continue
+            
         else:
 
             studentPrefMatrix.itemset(
@@ -67,3 +75,4 @@ for group in studentIdxs:
 
 studentsDf = pd.DataFrame(data=studentGroups)
 studentsDf.to_csv('rooms.csv',index=True, header=False)
+errorDf.to_csv('errors.csv',index=True, header=True)

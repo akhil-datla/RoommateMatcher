@@ -55,7 +55,7 @@ matching = Matching(
     studentPrefMatrix, group_size=groupSize, iter_count=2, final_iter_count=2
 )
 score, studentIdxs = matching.solve()
-print(f"Irving's Algorithm Score for {studentsDf.name}: {score}")
+print(f"Irving's Algorithm Score: {score}")
 
 # Converting list of student indexes to list of student names
 for group in studentIdxs:

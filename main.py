@@ -42,11 +42,13 @@ for idx in studentsDf.index:
         # check if the prefrence is in the dataset
         if (studentsDf[studentsDf["Email Address"] == pref].index.values.size <= 0):
             errorDf.loc[len(errorDf.index)] = [row["Full Name"], student, "Preference not in dataset or does not have preference"]
+            studentsDf.drop(idx, inplace=True)
             continue
             
         # check if student put themself as a preference
         elif (student == pref):
             errorDf.loc[len(errorDf.index)] = [row["Full Name"], student, "Preference is themself"]
+            studentsDf.drop(idx, inplace=True)
             continue
             
         else:

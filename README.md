@@ -1,10 +1,10 @@
 # RoommateMatcher
 
-[![CodeQL](https://github.com/akhil-datla/Roommate-Matcher/actions/workflows/codeql.yml/badge.svg)](https://github.com/akhil-datla/Roommate-Matcher/actions/workflows/codeql.yml)
+[![CodeQL](https://github.com/akhil-datla/RoommateMatcher/actions/workflows/codeql.yml/badge.svg)](https://github.com/akhil-datla/Roommate-Matcher/actions/workflows/codeql.yml)
 
-1. Clone this GitHub repository or [download the zip file](https://github.com/akhil-datla/Roommate-Matcher/archive/refs/heads/main.zip).
+1. Clone this GitHub repository or [download the zip file](https://github.com/akhil-datla/RoommateMatcher/archive/refs/heads/main.zip).
 
-2. [Edit the group size](https://github.com/akhil-datla/Roommate-Matcher/blob/main/main.py#L7) (default: 4).
+2. [Edit the group size](https://github.com/akhil-datla/RoommateMatcher/blob/main/main.py#L7) (default: 4).
 
 3. Download [pip](https://pip.pypa.io/en/stable/installation/) if you need to.
 

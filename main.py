@@ -4,7 +4,7 @@ import pandas as pd
 from algorithm import Matching, Group
 import sys
 
-# Group size is 4
+# Set maximum number of students in a room
 groupSize = 4
 
 #Student Groups list
